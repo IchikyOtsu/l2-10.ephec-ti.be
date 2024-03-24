@@ -9,5 +9,5 @@ $TTL    604800
 @       IN      NS      ns.l2-10.ephec-ti.be.
 
 ; addresses
-ns      IN      A       192.0.2.4
-www     IN      A       192.0.2.5
+ns      IN      A       54.37.15.108
+www     IN      A       54.37.15.108
