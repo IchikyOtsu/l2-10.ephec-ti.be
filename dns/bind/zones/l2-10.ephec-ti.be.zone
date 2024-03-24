@@ -11,3 +11,4 @@ $TTL    604800
 ; addresses
 ns      IN      A       54.37.15.108
 www     IN      A       54.37.15.108
+blog    IN      A       54.37.15.108
