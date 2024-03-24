@@ -1,5 +1,5 @@
 FROM nginx:latest
-COPY ngnix/ngnix.conf /etc/nginx/nginx.conf
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 RUN mkdir -p /var/www/html/www
 RUN mkdir -p /var/www/html/blog
 COPY pages/www/index.html /var/www/html/www/index.html
