@@ -1,22 +1,50 @@
 services:
-  nginx:
-    build: ./nginx
+  web:
+    build: .
+    image: image-web
+    container_name: web
+    hostname: web
+    depends_on:
+      - php
     ports:
-      - "80:80"
+      - 80:80
     volumes:
-      - ./html/:/var/www/html/
+      - ./pages:/var/www/html
 
-  mariadb:
-    image: mariadb:11.1
-    env_file:
-      - db/root.env
-      - .env
-    volumes:
-      - ./db/sql/:/docker-entrypoint-initdb.d/  # MariaDB container automatically loads SQL script at startup
-      - ./db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
+    networks:
+      - api
   php:
     build: ./php
+    image: php
+    container_name: php
+    hostname: php
+    depends_on:
+      - db
+    environment:
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${PHP_USER}
+      MYSQL_PASSWORD: ${PHP_PASS}
+      MYSQL_HOST: ${PHP_HOST}
     volumes:
-      - ./html/:/var/www/html/
-    env_file:
-      - .env
+      - ./pages:/var/www/html
+    networks:
+      - api
+      - db
+  db:
+    image: mariadb
+    container_name: db
+    hostname: db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${USER_DB}
+      MYSQL_PASSWORD: ${USER_PASS}
+    volumes:
+      - ./db/sql:/docker-entrypoint-initdb.d
+      - ./db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
+    networks:
+      - db
+
+networks:
+  api:
+  db:
