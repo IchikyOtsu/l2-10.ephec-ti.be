@@ -1,35 +1,22 @@
-services:
-  web:
-    image: image-web
-    ports:
-      - "80:80"
-    volumes:
-      - /l2-10.ephec-ti.be/web/pages:/var/www/html/
-    networks:
-      custom_network:
-        ipv4_address: 172.17.0.3
-    container_name: web
+services :
+  nginx:
+    build: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./html/:/var/www/html/
 
-  php:
-    image: php
-    volumes:
-      - /l2-10.ephec-ti.be/web/pages/www:/var/www/html/www
-    networks:
-      custom_network:
-        ipv4_address: 172.17.0.5
-    container_name: php
+  mariadb:
+    image: mariadb:11.1
+    env_file:
+      - db/root.env
+      - db.env
+    volumes:
+      - ./db/sql/:/docker-entrypoint-initdb.d/  #MariaDB container automatically loads SQL script at startup
 
-  mariadb:
-    image: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: mypass
-    networks:
-      custom_network:
-        ipv4_address: 172.17.0.4
-    container_name: mariadb
-
-networks:
-  custom_network:
-    ipam:
-      config:
-        - subnet: 172.17.0.0/16
+  php:
+    build: php
+    volumes:
+      - ./html/:/var/www/html/
+    env_file:
+      - db.env
