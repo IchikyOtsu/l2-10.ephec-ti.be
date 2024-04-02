@@ -1,0 +1,35 @@
+services:
+  web:
+    image: image-web
+    ports:
+      - "80:80"
+    volumes:
+      - /l2-10.ephec-ti.be/web/pages:/var/www/html/
+    networks:
+      custom_network:
+        ipv4_address: 172.17.0.3
+    container_name: web
+
+  php:
+    image: php
+    volumes:
+      - /l2-10.ephec-ti.be/web/pages/www:/var/www/html/www
+    networks:
+      custom_network:
+        ipv4_address: 172.17.0.5
+    container_name: php
+
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: mypass
+    networks:
+      custom_network:
+        ipv4_address: 172.17.0.4
+    container_name: mariadb
+
+networks:
+  custom_network:
+    ipam:
+      config:
+        - subnet: 172.17.0.0/16
