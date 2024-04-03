@@ -10,6 +10,11 @@ $TTL    86400
 
 ; addresses
 ns      IN      A       54.37.15.108
+ns      IN      AAAA       2001:41d0:401:3000::a8a
 www     IN      A       54.37.15.108
+www     IN      A       2001:41d0:401:3000::a8a
 blog    IN      A       54.37.15.108
+blog    IN      A       2001:41d0:401:3000::a8a
+
+github  IN      CNAME   https://github.com/IchikyOtsu/l2-10.ephec-ti.be
 
