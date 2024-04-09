@@ -15,4 +15,5 @@ www     IN      A       54.37.15.108
 www     IN      AAAA       2001:41d0:401:3000::a8a
 blog    IN      A       54.37.15.108
 blog    IN      AAAA       2001:41d0:401:3000::a8a
-
+dev    IN      A       54.37.15.108
+dev    IN      AAAA       2001:41d0:401:3000::a8a
