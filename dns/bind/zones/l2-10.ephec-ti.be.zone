@@ -8,7 +8,7 @@ $TTL    86400
 ; nameservers
 @       IN      NS      ns.l2-10.ephec-ti.be.
 @       IN      MX      mail.l2-10.ephec-ti.be.
-
+_acme-challenge         IN      TXT udPhMPSe61WTngOcIi81BblsXvnTEJ0NxXqu44daCq8
 ; addresses
 ns      IN      A       54.37.15.108
 ns      IN      AAAA       2001:41d0:401:3000::a8a
