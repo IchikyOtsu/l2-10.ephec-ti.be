@@ -1,5 +1,5 @@
 $TTL    86400
-@       IN      SOA     ns.l2-10.ephec-ti.be. b.delcroix.students.ephec.be. (
+@       IN      SOA     ns.l2-10.ephec-ti.be. mail.l2-10.ephec-ti.be. (
                               2023032402 ; Serial
                               86400      ; Refresh
                               7200       ; Retry
