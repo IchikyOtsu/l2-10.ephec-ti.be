@@ -7,7 +7,11 @@ $TTL    86400
                               86400 )    ; Negative Cache TTL
 ; nameservers
 @       IN      NS      ns.l2-10.ephec-ti.be.
+
+; MX
 @       IN      MX      mail.l2-10.ephec-ti.be.
+l2-10.ephec-ti.be IN TXT "v=spf1 mx -all"
+
 
 ; addresses
 ns      IN      A       54.37.15.108
@@ -16,5 +20,5 @@ www     IN      A       54.37.15.108
 www     IN      AAAA       2001:41d0:401:3000::a8a
 blog    IN      A       54.37.15.108
 blog    IN      AAAA       2001:41d0:401:3000::a8a
-dev    IN      A       54.37.15.108
+dev     IN      A       54.37.15.108
 mail    IN      A       54.37.15.108
