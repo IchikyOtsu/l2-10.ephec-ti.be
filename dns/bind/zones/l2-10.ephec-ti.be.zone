@@ -13,7 +13,7 @@ $TTL    86400
 l2-10.ephec-ti.be IN TXT "v=spf1 mx -all"
 
 
-_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT  VAQL9PtSgt7LbuAPU6blaLZKmG2r2m9upxheJxExVXc
+_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT  3V9XzqOD1Ha4Ddj0PlgmNjyC4KX8zFdjNh61R83y-SY
 ; addresses
 ns      IN      A       54.37.15.108
 ns      IN      AAAA       2001:41d0:401:3000::a8a
