@@ -4682,3 +4682,31 @@ Apr 13 19:44:51 mail dovecot: imap-login: Login: user=<user2@l2-10.ephec-ti.be>,
 Apr 13 19:47:30 mail postfix/anvil[1581]: statistics: max connection rate 2/60s for (submission:109.89.224.199) at Apr 13 19:42:52
 Apr 13 19:47:30 mail postfix/anvil[1581]: statistics: max connection count 1 for (submission:109.89.224.199) at Apr 13 19:42:52
 Apr 13 19:47:30 mail postfix/anvil[1581]: statistics: max cache size 2 at Apr 13 19:42:53
+Apr 13 19:51:37 mail dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, lmtp
+Apr 13 19:51:38 mail opendkim[623]: OpenDKIM Filter v2.11.0 starting (args: -f)
+Apr 13 19:51:38 mail opendmarc[638]: OpenDMARC Filter v1.4.0 starting (args: -f -p inet:8893@localhost -P /var/run/opendmarc/opendmarc.pid)
+Apr 13 19:51:38 mail opendmarc[638]: additional trusted authentication services: mail.l2-10.ephec-ti.be
+Apr 13 19:51:40 mail postfix/postfix-script[736]: starting the Postfix mail system
+Apr 13 19:51:40 mail postfix/master[737]: daemon started -- version 3.5.23, configuration /etc/postfix
+Apr 13 19:51:40 mail amavis[686]: starting. /usr/sbin/amavisd-new at mail.l2-10.ephec-ti.be amavisd-new-2.11.1 (20181009), Unicode aware, LC_CTYPE="C.UTF-8"
+Apr 13 19:51:40 mail amavis[686]: perl=5.032001, user=, EUID: 110 (110);  group=, EGID: 112 112 (112 112)
+Apr 13 19:51:41 mail amavis[686]: Net::Server: Group Not Defined.  Defaulting to EGID '112 112'
+Apr 13 19:51:41 mail amavis[686]: Net::Server: User Not Defined.  Defaulting to EUID '110'
+Apr 13 19:51:41 mail amavis[686]: No ext program for   .zoo, tried: zoo
+Apr 13 19:51:41 mail amavis[686]: No ext program for   .doc, tried: ripole
+Apr 13 19:51:41 mail amavis[686]: No decoder for       .F   
+Apr 13 19:51:41 mail amavis[686]: No decoder for       .doc 
+Apr 13 19:51:41 mail amavis[686]: No decoder for       .zoo 
+Apr 13 19:51:57 mail amavis[686]: (!)Net::Server: 2024/04/13-19:51:57 Re-exec server during HUP
+Apr 13 19:51:57 mail postfix/postfix-script[964]: refreshing the Postfix mail system
+Apr 13 19:51:57 mail postfix/master[737]: reload -- version 3.5.23, configuration /etc/postfix
+Apr 13 19:51:57 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 13 19:51:58 mail amavis[686]: starting. (warm) /usr/sbin/amavisd-new at mail.l2-10.ephec-ti.be amavisd-new-2.11.1 (20181009), Unicode aware, LC_CTYPE="C.UTF-8"
+Apr 13 19:51:58 mail amavis[686]: perl=5.032001, user=110, EUID: 110 (110);  group=, EGID: 112 112 (112 112)
+Apr 13 19:51:58 mail amavis[686]: Net::Server: Group Not Defined.  Defaulting to EGID '112 112'
+Apr 13 19:51:58 mail amavis[686]: Net::Server: User Not Defined.  Defaulting to EUID '110'
+Apr 13 19:51:58 mail amavis[686]: No ext program for   .zoo, tried: zoo
+Apr 13 19:51:58 mail amavis[686]: No ext program for   .doc, tried: ripole
+Apr 13 19:51:58 mail amavis[686]: No decoder for       .F   
+Apr 13 19:51:58 mail amavis[686]: No decoder for       .doc 
+Apr 13 19:51:58 mail amavis[686]: No decoder for       .zoo 

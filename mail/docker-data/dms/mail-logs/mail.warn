@@ -4596,3 +4596,5 @@ Apr 13 19:36:46 mail postfix/master[847]: warning: duplicate master.cf entry for
 Apr 13 19:36:46 mail postfix/master[847]: warning: duplicate master.cf entry for service "127.0.0.1:10025" ([127.0.0.1]:10025) -- using the last entry
 Apr 13 19:40:24 mail amavis[749]: (!)Net::Server: 2024/04/13-19:40:24 Re-exec server during HUP
 Apr 13 19:40:25 mail dovecot: master: Warning: SIGHUP received - reloading configuration
+Apr 13 19:51:57 mail amavis[686]: (!)Net::Server: 2024/04/13-19:51:57 Re-exec server during HUP
+Apr 13 19:51:57 mail dovecot: master: Warning: SIGHUP received - reloading configuration
