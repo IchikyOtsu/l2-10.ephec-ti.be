@@ -9,7 +9,7 @@ $TTL    86400
 @       IN      NS      ns.l2-10.ephec-ti.be.
 
 ; MX
-@       IN      MX      mail.l2-10.ephec-ti.be.
+@ IN MX 10 mail.l2-10.ephec-ti.be.
 l2-10.ephec-ti.be IN TXT "v=spf1 mx -all"
 
 
