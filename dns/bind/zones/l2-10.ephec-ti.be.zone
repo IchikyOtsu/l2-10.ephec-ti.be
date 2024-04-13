@@ -9,7 +9,7 @@ $TTL    86400
 @       IN      NS      ns.l2-10.ephec-ti.be.
 @       IN      MX      mail.l2-10.ephec-ti.be.
 
-_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT haNOPLSYN_0cNqE_BgmanbaLbafQb6wBcJGr-1QZup8
+_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT  VAQL9PtSgt7LbuAPU6blaLZKmG2r2m9upxheJxExVXc
 ; addresses
 ns      IN      A       54.37.15.108
 ns      IN      AAAA       2001:41d0:401:3000::a8a
