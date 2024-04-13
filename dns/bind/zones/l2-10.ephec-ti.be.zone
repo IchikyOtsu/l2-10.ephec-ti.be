@@ -1,5 +1,5 @@
 $TTL    86400
-@       IN      SOA     ns.l2-10.ephec-ti.be. b.delcroix.students.ephec.be. (
+@       IN      SOA     ns.l2-10.ephec-ti.be. mail.l2-10.ephec-ti.be. (
                               2023032402 ; Serial
                               86400      ; Refresh
                               7200       ; Retry
@@ -13,6 +13,7 @@ $TTL    86400
 l2-10.ephec-ti.be IN TXT "v=spf1 mx -all"
 
 
+_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT haNOPLSYN_0cNqE_BgmanbaLbafQb6wBcJGr-1QZup8
 ; addresses
 ns      IN      A       54.37.15.108
 ns      IN      AAAA       2001:41d0:401:3000::a8a
