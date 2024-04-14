@@ -19,6 +19,7 @@ l2-10.ephec-ti.be. IN TXT "v=spf1 mx -all"
 ; ACME challenge
 _acme-challenge.mail.l2-10.ephec-ti.be. IN TXT "3V9XzqOD1Ha4Ddj0PlgmNjyC4KX8zFdjNh61R83y-SY"
 
+_dmarc.l2-10.ephec-ti.be.  IN TXT "v=DMARC1; p=reject; rua=mailto:user1@l2-10.ephec-ti.be; ruf=mailto:user1@l2-10.ephec-ti.be; sp=none; ri=86400"
 ; Address records
 ns     IN A     54.37.15.108
 ns     IN AAAA  2001:41d0:401:3000::a8a
