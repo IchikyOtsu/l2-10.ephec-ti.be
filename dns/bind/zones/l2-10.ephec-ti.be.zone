@@ -1,25 +1,30 @@
-$TTL    86400
-@       IN      SOA     ns.l2-10.ephec-ti.be. mail.l2-10.ephec-ti.be. (
-                              2023032402 ; Serial
-                              86400      ; Refresh
-                              7200       ; Retry
-                              3600000    ; Expire
-                              86400 )    ; Negative Cache TTL
-; nameservers
-@       IN      NS      ns.l2-10.ephec-ti.be.
+$TTL 86400
 
-; MX
+@ IN SOA ns.l2-10.ephec-ti.be. b.delcroix.students.ephec.be. (
+    2023032402 ; Serial
+    86400      ; Refresh
+    7200       ; Retry
+    3600000    ; Expire
+    86400 )    ; Negative Cache TTL
+
+; Nameservers
+@ IN NS ns.l2-10.ephec-ti.be.
+
+; MX record
 @ IN MX 10 mail.l2-10.ephec-ti.be.
-l2-10.ephec-ti.be IN TXT "v=spf1 mx -all"
 
+; SPF record
+l2-10.ephec-ti.be. IN TXT "v=spf1 mx -all"
 
-_acme-challenge.mail.l2-10.ephec-ti.be.        IN      TXT  3V9XzqOD1Ha4Ddj0PlgmNjyC4KX8zFdjNh61R83y-SY
-; addresses
-ns      IN      A       54.37.15.108
-ns      IN      AAAA       2001:41d0:401:3000::a8a
-www     IN      A       54.37.15.108
-www     IN      AAAA       2001:41d0:401:3000::a8a
-blog    IN      A       54.37.15.108
-blog    IN      AAAA       2001:41d0:401:3000::a8a
-dev     IN      A       54.37.15.108
-mail    IN      A       54.37.15.108
+; ACME challenge
+_acme-challenge.mail.l2-10.ephec-ti.be. IN TXT "3V9XzqOD1Ha4Ddj0PlgmNjyC4KX8zFdjNh61R83y-SY"
+
+; Address records
+ns     IN A     54.37.15.108
+ns     IN AAAA  2001:41d0:401:3000::a8a
+www    IN A     54.37.15.108
+www    IN AAAA  2001:41d0:401:3000::a8a
+blog   IN A     54.37.15.108
+blog   IN AAAA  2001:41d0:401:3000::a8a
+dev    IN A     54.37.15.108
+mail   IN A     54.37.15.108
