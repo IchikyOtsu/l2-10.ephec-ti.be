@@ -6430,3 +6430,174 @@ Apr 14 21:14:16 mail postfix/qmgr[2154]: DB6BE6083F: removed
 Apr 14 21:14:17 mail postfix/smtp[30705]: Trusted TLS connection established to students-ephec-be.mail.protection.outlook.com[52.101.68.18]:25: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange ECDHE (P-384) server-signature RSA-PSS (2048 bits) server-digest SHA256
 Apr 14 21:14:17 mail postfix/smtp[30705]: AC08A60844: to=<l.istas@students.ephec.be>, relay=students-ephec-be.mail.protection.outlook.com[52.101.68.18]:25, delay=1.2, delays=0.02/0.05/0.33/0.79, dsn=2.6.0, status=sent (250 2.6.0 <e0e3ddf0-41cc-4fb6-a36e-b5a93e3ee59c@l2-10.ephec-ti.be> [InternalId=119601954296357, Hostname=DB9PR05MB8587.eurprd05.prod.outlook.com] 9595 bytes in 0.085, 109.717 KB/sec Queued mail for delivery)
 Apr 14 21:14:17 mail postfix/qmgr[2154]: AC08A60844: removed
+Apr 14 21:15:56 mail postfix/submissions/smtpd[30692]: disconnect from host-95-182-142-115.dynamic.voo.be[95.182.142.115] ehlo=1 auth=1 mail=1 rcpt=1 data=1 commands=5
+Apr 14 21:19:16 mail postfix/anvil[30695]: statistics: max connection rate 1/60s for (submissions:95.182.142.115) at Apr 14 21:14:15
+Apr 14 21:19:16 mail postfix/anvil[30695]: statistics: max connection count 1 for (submissions:95.182.142.115) at Apr 14 21:14:15
+Apr 14 21:19:16 mail postfix/anvil[30695]: statistics: max cache size 1 at Apr 14 21:14:15
+Apr 14 21:19:16 mail postfix/smtpd-amavis/smtpd[30703]: timeout after END-OF-MESSAGE from localhost[127.0.0.1]
+Apr 14 21:19:16 mail postfix/smtpd-amavis/smtpd[30703]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 commands=4
+Apr 14 21:21:16 mail dovecot: imap-login: Disconnected: Connection closed (no auth attempts in 0 secs): user=<>, rip=162.142.125.14, lip=192.168.32.2, TLS: Connection closed, session=<mCbTFRUWEoiijn0O>
+Apr 14 21:21:18 mail dovecot: imap-login: Disconnected: Too many invalid commands (no auth attempts in 0 secs): user=<>, rip=162.142.125.14, lip=192.168.32.2, session=<QWHpFRUW0riijn0O>
+Apr 14 21:21:19 mail dovecot: imap-login: Disconnected: Too many invalid commands (no auth attempts in 0 secs): user=<>, rip=162.142.125.14, lip=192.168.32.2, session=<yEL8FRUW+rGijn0O>
+Apr 14 21:21:20 mail dovecot: imap-login: Disconnected: Too many invalid commands (no auth attempts in 0 secs): user=<>, rip=162.142.125.14, lip=192.168.32.2, session=<o5cUFhUWQs+ijn0O>
+Apr 14 21:21:22 mail dovecot: imap-login: Disconnected: Too many invalid commands (no auth attempts in 0 secs): user=<>, rip=162.142.125.14, lip=192.168.32.2, session=<U9stFhUW4Imijn0O>
+Apr 14 21:21:45 mail postfix/postscreen[31510]: CONNECT from [198.61.254.34]:29167 to [192.168.32.2]:25
+Apr 14 21:21:45 mail postfix/postscreen[31510]: cache btree:/var/lib/postfix/postscreen_cache full cleanup: retained=9 dropped=0 entries
+Apr 14 21:21:51 mail postfix/postscreen[31510]: PASS NEW [198.61.254.34]:29167
+Apr 14 21:21:51 mail postfix/smtpd[31520]: connect from so254-34.mailgun.net[198.61.254.34]
+Apr 14 21:21:52 mail postfix/smtpd[31520]: SSL_accept error from so254-34.mailgun.net[198.61.254.34]: -1
+Apr 14 21:21:52 mail postfix/smtpd[31520]: warning: TLS library problem: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate:../ssl/record/rec_layer_s3.c:1562:SSL alert number 42:
+Apr 14 21:21:52 mail postfix/smtpd[31520]: lost connection after STARTTLS from so254-34.mailgun.net[198.61.254.34]
+Apr 14 21:21:52 mail postfix/smtpd[31520]: disconnect from so254-34.mailgun.net[198.61.254.34] ehlo=1 starttls=0/1 commands=1/2
+Apr 14 21:21:52 mail postfix/postscreen[31510]: CONNECT from [198.61.254.34]:51305 to [192.168.32.2]:25
+Apr 14 21:21:52 mail postfix/postscreen[31510]: PASS OLD [198.61.254.34]:51305
+Apr 14 21:21:53 mail postfix/smtpd[31520]: connect from so254-34.mailgun.net[198.61.254.34]
+Apr 14 21:21:53 mail postfix/smtpd[31520]: Anonymous TLS connection established from so254-34.mailgun.net[198.61.254.34]: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+Apr 14 21:21:54 mail postfix/smtpd[31520]: NOQUEUE: reject: RCPT from so254-34.mailgun.net[198.61.254.34]: 554 5.7.1 <root@vps-41d7e8fa.vps.ovh.net>: Relay access denied; from=<bounce+35bf9d.dcab04-root=vps-41d7e8fa.vps.ovh.net@getgitguardian.com> to=<root@vps-41d7e8fa.vps.ovh.net> proto=ESMTP helo=<so254-34.mailgun.net>
+Apr 14 21:21:54 mail postfix/smtpd[31520]: disconnect from so254-34.mailgun.net[198.61.254.34] ehlo=2 starttls=1 mail=1 rcpt=0/1 quit=1 commands=5/6
+Apr 14 21:25:14 mail postfix/anvil[31522]: statistics: max connection rate 2/60s for (smtpd:198.61.254.34) at Apr 14 21:21:53
+Apr 14 21:25:14 mail postfix/anvil[31522]: statistics: max connection count 1 for (smtpd:198.61.254.34) at Apr 14 21:21:51
+Apr 14 21:25:14 mail postfix/anvil[31522]: statistics: max cache size 1 at Apr 14 21:21:51
+Apr 14 21:25:46 mail dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, lmtp
+Apr 14 21:25:47 mail opendkim[650]: OpenDKIM Filter v2.11.0 starting (args: -f)
+Apr 14 21:25:47 mail opendmarc[665]: OpenDMARC Filter v1.4.0 starting (args: -f -p inet:8893@localhost -P /var/run/opendmarc/opendmarc.pid)
+Apr 14 21:25:47 mail opendmarc[665]: additional trusted authentication services: mail.l2-10.ephec-ti.be
+Apr 14 21:25:49 mail postfix/postfix-script[763]: starting the Postfix mail system
+Apr 14 21:25:49 mail postfix/master[764]: daemon started -- version 3.5.23, configuration /etc/postfix
+Apr 14 21:25:49 mail amavis[710]: starting. /usr/sbin/amavisd-new at mail.l2-10.ephec-ti.be amavisd-new-2.11.1 (20181009), Unicode aware, LC_CTYPE="C.UTF-8"
+Apr 14 21:25:49 mail amavis[710]: perl=5.032001, user=, EUID: 110 (110);  group=, EGID: 112 112 (112 112)
+Apr 14 21:25:50 mail amavis[710]: Net::Server: Group Not Defined.  Defaulting to EGID '112 112'
+Apr 14 21:25:50 mail amavis[710]: Net::Server: User Not Defined.  Defaulting to EUID '110'
+Apr 14 21:25:50 mail amavis[710]: No ext program for   .zoo, tried: zoo
+Apr 14 21:25:50 mail amavis[710]: No ext program for   .doc, tried: ripole
+Apr 14 21:25:50 mail amavis[710]: No decoder for       .F   
+Apr 14 21:25:50 mail amavis[710]: No decoder for       .doc 
+Apr 14 21:25:50 mail amavis[710]: No decoder for       .zoo 
+Apr 14 21:29:54 mail dovecot: imap-login: Login: user=<user2@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=1238, TLS, session=<6eutNBUW08ltWeDH>
+Apr 14 21:29:54 mail dovecot: imap-login: Login: user=<user2@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=1239, TLS, session=<C+qtNBUW1MltWeDH>
+Apr 14 21:29:54 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=1240, TLS, session=<JAuuNBUW1sltWeDH>
+Apr 14 21:29:54 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=1241, TLS, session=<+Q2uNBUW1cltWeDH>
+Apr 14 21:30:03 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=1258, TLS, session=<VpZBNRUWEsptWeDH>
+Apr 14 21:32:19 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=95.182.142.115, lip=192.168.48.2, mpid=1500, TLS, session=<csVPPRUWsNFfto5z>
+Apr 14 21:32:38 mail postfix/submissions/smtpd[1528]: connect from host-95-182-142-115.dynamic.voo.be[95.182.142.115]
+Apr 14 21:32:38 mail postfix/submissions/smtpd[1528]: Anonymous TLS connection established from host-95-182-142-115.dynamic.voo.be[95.182.142.115]: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+Apr 14 21:32:39 mail postfix/submissions/smtpd[1528]: 0D694607AD: client=host-95-182-142-115.dynamic.voo.be[95.182.142.115], sasl_method=PLAIN, sasl_username=user1@l2-10.ephec-ti.be
+Apr 14 21:32:39 mail postfix/sender-cleanup/cleanup[1536]: 0D694607AD: message-id=<68769a75-2bf8-4f09-898a-4023b2fa4a05@l2-10.ephec-ti.be>
+Apr 14 21:32:39 mail postfix/sender-cleanup/cleanup[1536]: 0D694607AD: replace: header MIME-Version: 1.0 from host-95-182-142-115.dynamic.voo.be[95.182.142.115]; from=<user1@l2-10.ephec-ti.be> to=<user2@l2-10.ephec-ti.be> proto=ESMTP helo=<[192.168.0.205]>: MIME-Version: 1.0
+Apr 14 21:32:39 mail opendkim[650]: 0D694607AD: DKIM-Signature field added (s=mail, d=l2-10.ephec-ti.be)
+Apr 14 21:32:39 mail postfix/qmgr[768]: 0D694607AD: from=<user1@l2-10.ephec-ti.be>, size=406, nrcpt=1 (queue active)
+Apr 14 21:32:39 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=95.182.142.115, lip=192.168.48.2, mpid=1540, TLS, session=</aiFPhUWs9Ffto5z>
+Apr 14 21:32:39 mail dovecot: imap(user1@l2-10.ephec-ti.be)<1540></aiFPhUWs9Ffto5z>: Disconnected: Logged out in=499 out=634 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+Apr 14 21:32:39 mail postfix/smtpd-amavis/smtpd[1542]: connect from localhost[127.0.0.1]
+Apr 14 21:32:39 mail postfix/smtpd-amavis/smtpd[1542]: E9F89607BB: client=localhost[127.0.0.1]
+Apr 14 21:32:39 mail postfix/cleanup[1543]: E9F89607BB: message-id=<68769a75-2bf8-4f09-898a-4023b2fa4a05@l2-10.ephec-ti.be>
+Apr 14 21:32:39 mail postfix/qmgr[768]: E9F89607BB: from=<user1@l2-10.ephec-ti.be>, size=1128, nrcpt=1 (queue active)
+Apr 14 21:32:39 mail amavis[815]: (00815-01) Passed CLEAN {RelayedInbound}, [95.182.142.115]:53682 [95.182.142.115] <user1@l2-10.ephec-ti.be> -> <user2@l2-10.ephec-ti.be>, Queue-ID: 0D694607AD, Message-ID: <68769a75-2bf8-4f09-898a-4023b2fa4a05@l2-10.ephec-ti.be>, mail_id: R66Yc72sPXGq, Hits: -0.1, size: 910, queued_as: E9F89607BB, 792 ms
+Apr 14 21:32:39 mail postfix/smtp-amavis/smtp[1537]: 0D694607AD: to=<user2@l2-10.ephec-ti.be>, relay=127.0.0.1[127.0.0.1]:10024, delay=0.98, delays=0.16/0.01/0.02/0.79, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10025): 250 2.0.0 Ok: queued as E9F89607BB)
+Apr 14 21:32:39 mail postfix/qmgr[768]: 0D694607AD: removed
+Apr 14 21:32:40 mail dovecot: lmtp(1545): Connect from local
+Apr 14 21:32:40 mail dovecot: lmtp(user2@l2-10.ephec-ti.be)<1545><lyWjAXhLHGYJBgAAWz6JYg>: sieve: msgid=<68769a75-2bf8-4f09-898a-4023b2fa4a05@l2-10.ephec-ti.be>: stored mail into mailbox 'INBOX'
+Apr 14 21:32:40 mail postfix/lmtp[1544]: E9F89607BB: to=<user2@l2-10.ephec-ti.be>, relay=mail.l2-10.ephec-ti.be[/var/run/dovecot/lmtp], delay=0.1, delays=0.02/0.04/0.03/0.01, dsn=2.0.0, status=sent (250 2.0.0 <user2@l2-10.ephec-ti.be> lyWjAXhLHGYJBgAAWz6JYg Saved)
+Apr 14 21:32:40 mail postfix/qmgr[768]: E9F89607BB: removed
+Apr 14 21:32:40 mail dovecot: lmtp(1545): Disconnect from local: Logged out (state=READY)
+Apr 14 21:34:19 mail postfix/submissions/smtpd[1528]: disconnect from host-95-182-142-115.dynamic.voo.be[95.182.142.115] ehlo=1 auth=1 mail=1 rcpt=1 data=1 commands=5
+Apr 14 21:34:28 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=95.182.142.115, lip=192.168.48.2, mpid=1738, TLS, session=<RC4GRRUW/9Ffto5z>
+Apr 14 21:37:39 mail postfix/anvil[1534]: statistics: max connection rate 1/60s for (submissions:95.182.142.115) at Apr 14 21:32:38
+Apr 14 21:37:39 mail postfix/anvil[1534]: statistics: max connection count 1 for (submissions:95.182.142.115) at Apr 14 21:32:38
+Apr 14 21:37:39 mail postfix/anvil[1534]: statistics: max cache size 1 at Apr 14 21:32:38
+Apr 14 21:37:40 mail postfix/smtpd-amavis/smtpd[1542]: timeout after END-OF-MESSAGE from localhost[127.0.0.1]
+Apr 14 21:37:40 mail postfix/smtpd-amavis/smtpd[1542]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 commands=4
+Apr 14 21:41:10 mail postfix/submissions/smtpd[2430]: connect from host-109-89-224-199.dynamic.voo.be[109.89.224.199]
+Apr 14 21:41:10 mail postfix/submissions/smtpd[2430]: Anonymous TLS connection established from host-109-89-224-199.dynamic.voo.be[109.89.224.199]: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+Apr 14 21:41:10 mail postfix/submissions/smtpd[2430]: 3827E607BB: client=host-109-89-224-199.dynamic.voo.be[109.89.224.199], sasl_method=PLAIN, sasl_username=user2@l2-10.ephec-ti.be
+Apr 14 21:41:10 mail postfix/sender-cleanup/cleanup[2435]: 3827E607BB: message-id=<8f29f7de-25be-4f82-81b8-9d760fdee7b5@l2-10.ephec-ti.be>
+Apr 14 21:41:10 mail postfix/sender-cleanup/cleanup[2435]: 3827E607BB: replace: header MIME-Version: 1.0 from host-109-89-224-199.dynamic.voo.be[109.89.224.199]; from=<user2@l2-10.ephec-ti.be> to=<user1@l2-10.ephec-ti.be> proto=ESMTP helo=<[192.168.0.34]>: MIME-Version: 1.0
+Apr 14 21:41:10 mail opendkim[650]: 3827E607BB: DKIM-Signature field added (s=mail, d=l2-10.ephec-ti.be)
+Apr 14 21:41:10 mail postfix/qmgr[768]: 3827E607BB: from=<user2@l2-10.ephec-ti.be>, size=620, nrcpt=1 (queue active)
+Apr 14 21:41:10 mail dovecot: imap(user2@l2-10.ephec-ti.be)<1238><6eutNBUW08ltWeDH>: Disconnected: Logged out in=901 out=1198 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+Apr 14 21:41:12 mail postfix/smtpd-amavis/smtpd[2442]: connect from localhost[127.0.0.1]
+Apr 14 21:41:12 mail postfix/smtpd-amavis/smtpd[2442]: 0DBE660884: client=localhost[127.0.0.1]
+Apr 14 21:41:12 mail postfix/cleanup[2443]: 0DBE660884: message-id=<8f29f7de-25be-4f82-81b8-9d760fdee7b5@l2-10.ephec-ti.be>
+Apr 14 21:41:12 mail postfix/qmgr[768]: 0DBE660884: from=<user2@l2-10.ephec-ti.be>, size=1367, nrcpt=1 (queue active)
+Apr 14 21:41:12 mail amavis[816]: (00816-01) Passed CLEAN {RelayedInbound}, [109.89.224.199]:52517 [109.89.224.199] <user2@l2-10.ephec-ti.be> -> <user1@l2-10.ephec-ti.be>, Queue-ID: 3827E607BB, Message-ID: <8f29f7de-25be-4f82-81b8-9d760fdee7b5@l2-10.ephec-ti.be>, mail_id: 34qsQhdtskhG, Hits: -0.1, size: 1149, queued_as: 0DBE660884, 1679 ms
+Apr 14 21:41:12 mail postfix/smtp-amavis/smtp[2436]: 3827E607BB: to=<user1@l2-10.ephec-ti.be>, relay=127.0.0.1[127.0.0.1]:10024, delay=1.9, delays=0.15/0.03/0.05/1.7, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10025): 250 2.0.0 Ok: queued as 0DBE660884)
+Apr 14 21:41:12 mail postfix/qmgr[768]: 3827E607BB: removed
+Apr 14 21:41:12 mail dovecot: lmtp(2445): Connect from local
+Apr 14 21:41:12 mail dovecot: lmtp(user1@l2-10.ephec-ti.be)<2445><9nQ8BnhNHGaNCQAAWz6JYg>: sieve: msgid=<8f29f7de-25be-4f82-81b8-9d760fdee7b5@l2-10.ephec-ti.be>: stored mail into mailbox 'INBOX'
+Apr 14 21:41:12 mail postfix/lmtp[2444]: 0DBE660884: to=<user1@l2-10.ephec-ti.be>, relay=mail.l2-10.ephec-ti.be[/var/run/dovecot/lmtp], delay=0.07, delays=0.01/0.03/0.02/0.01, dsn=2.0.0, status=sent (250 2.0.0 <user1@l2-10.ephec-ti.be> 9nQ8BnhNHGaNCQAAWz6JYg Saved)
+Apr 14 21:41:12 mail postfix/qmgr[768]: 0DBE660884: removed
+Apr 14 21:41:12 mail dovecot: lmtp(2445): Disconnect from local: Logged out (state=READY)
+Apr 14 21:41:15 mail postfix/submissions/smtpd[2430]: disconnect from host-109-89-224-199.dynamic.voo.be[109.89.224.199] ehlo=1 auth=1 mail=1 rcpt=1 data=1 quit=1 commands=6
+Apr 14 21:43:59 mail postfix/submissions/smtpd[2741]: connect from host-95-182-142-115.dynamic.voo.be[95.182.142.115]
+Apr 14 21:43:59 mail postfix/submissions/smtpd[2741]: Anonymous TLS connection established from host-95-182-142-115.dynamic.voo.be[95.182.142.115]: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange X25519 server-signature RSA-PSS (2048 bits)
+Apr 14 21:43:59 mail postfix/submissions/smtpd[2741]: C0EE3607AE: client=host-95-182-142-115.dynamic.voo.be[95.182.142.115], sasl_method=PLAIN, sasl_username=user1@l2-10.ephec-ti.be
+Apr 14 21:43:59 mail postfix/sender-cleanup/cleanup[2743]: C0EE3607AE: message-id=<15bbba34-127b-4891-9b36-48b0dd5aca1b@l2-10.ephec-ti.be>
+Apr 14 21:43:59 mail postfix/sender-cleanup/cleanup[2743]: C0EE3607AE: replace: header MIME-Version: 1.0 from host-95-182-142-115.dynamic.voo.be[95.182.142.115]; from=<user1@l2-10.ephec-ti.be> to=<user2@l2-10.ephec-ti.be> proto=ESMTP helo=<[192.168.0.205]>: MIME-Version: 1.0
+Apr 14 21:43:59 mail opendkim[650]: C0EE3607AE: DKIM-Signature field added (s=mail, d=l2-10.ephec-ti.be)
+Apr 14 21:43:59 mail postfix/qmgr[768]: C0EE3607AE: from=<user1@l2-10.ephec-ti.be>, size=408, nrcpt=1 (queue active)
+Apr 14 21:44:00 mail dovecot: imap(user1@l2-10.ephec-ti.be)<1500><csVPPRUWsNFfto5z>: Disconnected: Logged out in=2104 out=3596 deleted=1 expunged=0 trashed=0 hdr_count=1 hdr_bytes=238 body_count=0 body_bytes=0
+Apr 14 21:44:00 mail postfix/smtpd-amavis/smtpd[2747]: connect from localhost[127.0.0.1]
+Apr 14 21:44:00 mail postfix/smtpd-amavis/smtpd[2747]: D0B9560840: client=localhost[127.0.0.1]
+Apr 14 21:44:00 mail postfix/cleanup[2748]: D0B9560840: message-id=<15bbba34-127b-4891-9b36-48b0dd5aca1b@l2-10.ephec-ti.be>
+Apr 14 21:44:00 mail postfix/qmgr[768]: D0B9560840: from=<user1@l2-10.ephec-ti.be>, size=1130, nrcpt=1 (queue active)
+Apr 14 21:44:00 mail postfix/smtpd-amavis/smtpd[2747]: disconnect from localhost[127.0.0.1] ehlo=1 mail=1 rcpt=1 data=1 quit=1 commands=5
+Apr 14 21:44:00 mail amavis[815]: (00815-02) Passed CLEAN {RelayedInbound}, [95.182.142.115]:53942 [95.182.142.115] <user1@l2-10.ephec-ti.be> -> <user2@l2-10.ephec-ti.be>, Queue-ID: C0EE3607AE, Message-ID: <15bbba34-127b-4891-9b36-48b0dd5aca1b@l2-10.ephec-ti.be>, mail_id: F1cYU2waYXeE, Hits: 1.886, size: 912, queued_as: D0B9560840, 947 ms
+Apr 14 21:44:00 mail postfix/smtp-amavis/smtp[2744]: C0EE3607AE: to=<user2@l2-10.ephec-ti.be>, relay=127.0.0.1[127.0.0.1]:10024, delay=1.1, delays=0.16/0.01/0.01/0.94, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10025): 250 2.0.0 Ok: queued as D0B9560840)
+Apr 14 21:44:00 mail postfix/qmgr[768]: C0EE3607AE: removed
+Apr 14 21:44:00 mail dovecot: lmtp(2750): Connect from local
+Apr 14 21:44:00 mail dovecot: lmtp(user2@l2-10.ephec-ti.be)<2750><NkxLNiBOHGa+CgAAWz6JYg>: sieve: msgid=<15bbba34-127b-4891-9b36-48b0dd5aca1b@l2-10.ephec-ti.be>: stored mail into mailbox 'INBOX'
+Apr 14 21:44:00 mail postfix/lmtp[2749]: D0B9560840: to=<user2@l2-10.ephec-ti.be>, relay=mail.l2-10.ephec-ti.be[/var/run/dovecot/lmtp], delay=0.08, delays=0.01/0.03/0.02/0.01, dsn=2.0.0, status=sent (250 2.0.0 <user2@l2-10.ephec-ti.be> NkxLNiBOHGa+CgAAWz6JYg Saved)
+Apr 14 21:44:00 mail postfix/qmgr[768]: D0B9560840: removed
+Apr 14 21:44:00 mail dovecot: lmtp(2750): Disconnect from local: Logged out (state=READY)
+Apr 14 21:44:21 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=95.182.142.115, lip=192.168.48.2, mpid=2792, TLS, session=<e8tkaBUWt9Jfto5z>
+Apr 14 21:44:27 mail dovecot: imap-login: Login: user=<user2@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=2803, TLS, session=<7O+3aBUWuM1tWeDH>
+Apr 14 21:45:39 mail postfix/submissions/smtpd[2741]: disconnect from host-95-182-142-115.dynamic.voo.be[95.182.142.115] ehlo=1 auth=1 mail=1 rcpt=1 data=1 commands=5
+Apr 14 21:45:44 mail postfix/submissions/smtpd[2741]: connect from host-95-182-142-115.dynamic.voo.be[95.182.142.115]
+Apr 14 21:45:44 mail postfix/submissions/smtpd[2741]: Anonymous TLS connection established from host-95-182-142-115.dynamic.voo.be[95.182.142.115]: TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits) key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256
+Apr 14 21:45:44 mail postfix/submissions/smtpd[2741]: 89EB2607E1: client=host-95-182-142-115.dynamic.voo.be[95.182.142.115], sasl_method=PLAIN, sasl_username=user1@l2-10.ephec-ti.be
+Apr 14 21:45:44 mail postfix/sender-cleanup/cleanup[2932]: 89EB2607E1: message-id=<14fe2e05-a862-4e4f-89f6-befe11ee2b80@l2-10.ephec-ti.be>
+Apr 14 21:45:44 mail postfix/sender-cleanup/cleanup[2932]: 89EB2607E1: replace: header MIME-Version: 1.0 from host-95-182-142-115.dynamic.voo.be[95.182.142.115]; from=<user1@l2-10.ephec-ti.be> to=<user2@l2-10.ephec-ti.be> proto=ESMTP helo=<[192.168.0.205]>: MIME-Version: 1.0
+Apr 14 21:45:44 mail opendkim[650]: 89EB2607E1: DKIM-Signature field added (s=mail, d=l2-10.ephec-ti.be)
+Apr 14 21:45:44 mail postfix/qmgr[768]: 89EB2607E1: from=<user1@l2-10.ephec-ti.be>, size=16160, nrcpt=1 (queue active)
+Apr 14 21:45:44 mail dovecot: imap(user1@l2-10.ephec-ti.be)<2792><e8tkaBUWt9Jfto5z>: Disconnected: Logged out in=16353 out=1209 deleted=0 expunged=0 trashed=0 hdr_count=0 hdr_bytes=0 body_count=0 body_bytes=0
+Apr 14 21:45:45 mail postfix/smtpd-amavis/smtpd[2442]: CC395608D2: client=localhost[127.0.0.1]
+Apr 14 21:45:45 mail postfix/cleanup[2939]: CC395608D2: message-id=<14fe2e05-a862-4e4f-89f6-befe11ee2b80@l2-10.ephec-ti.be>
+Apr 14 21:45:45 mail postfix/qmgr[768]: CC395608D2: from=<user1@l2-10.ephec-ti.be>, size=17364, nrcpt=1 (queue active)
+Apr 14 21:45:45 mail postfix/smtpd-amavis/smtpd[2442]: disconnect from localhost[127.0.0.1] ehlo=1 mail=2 rcpt=2 data=2 noop=1 quit=1 commands=9
+Apr 14 21:45:45 mail amavis[816]: (00816-02) Passed SPAM {RelayedTaggedInbound,Quarantined}, [95.182.142.115]:53947 [95.182.142.115] <user1@l2-10.ephec-ti.be> -> <user2@l2-10.ephec-ti.be>, quarantine: L/spam-LZpHA96W7IYC.gz, Queue-ID: 89EB2607E1, Message-ID: <14fe2e05-a862-4e4f-89f6-befe11ee2b80@l2-10.ephec-ti.be>, mail_id: LZpHA96W7IYC, Hits: 999.902, size: 16657, queued_as: CC395608D2, 1136 ms
+Apr 14 21:45:45 mail postfix/smtp-amavis/smtp[2933]: 89EB2607E1: to=<user2@l2-10.ephec-ti.be>, relay=127.0.0.1[127.0.0.1]:10024, delay=1.3, delays=0.17/0.01/0.01/1.1, dsn=2.0.0, status=sent (250 2.0.0 from MTA(smtp:[127.0.0.1]:10025): 250 2.0.0 Ok: queued as CC395608D2)
+Apr 14 21:45:45 mail postfix/qmgr[768]: 89EB2607E1: removed
+Apr 14 21:45:45 mail dovecot: lmtp(2941): Connect from local
+Apr 14 21:45:45 mail dovecot: lmtp(user2@l2-10.ephec-ti.be)<2941><BOmNNIlOHGZ9CwAAWz6JYg>: sieve: msgid=<14fe2e05-a862-4e4f-89f6-befe11ee2b80@l2-10.ephec-ti.be>: fileinto action: stored mail into mailbox 'Junk'
+Apr 14 21:45:45 mail postfix/lmtp[2940]: CC395608D2: to=<user2@l2-10.ephec-ti.be>, relay=mail.l2-10.ephec-ti.be[/var/run/dovecot/lmtp], delay=0.07, delays=0.01/0.03/0.01/0.01, dsn=2.0.0, status=sent (250 2.0.0 <user2@l2-10.ephec-ti.be> BOmNNIlOHGZ9CwAAWz6JYg Saved)
+Apr 14 21:45:45 mail postfix/qmgr[768]: CC395608D2: removed
+Apr 14 21:45:45 mail dovecot: lmtp(2941): Disconnect from local: Logged out (state=READY)
+Apr 14 21:46:01 mail dovecot: imap-login: Login: user=<user1@l2-10.ephec-ti.be>, method=PLAIN, rip=95.182.142.115, lip=192.168.48.2, mpid=2974, TLS, session=<mK5ZbhUWvNJfto5z>
+Apr 14 21:46:21 mail dovecot: imap-login: Login: user=<user2@l2-10.ephec-ti.be>, method=PLAIN, rip=109.89.224.199, lip=192.168.48.2, mpid=3010, TLS, session=<92WAbxUWGM5tWeDH>
+Apr 14 21:47:00 mail dovecot: imap-login: Disconnected: Connection closed: SSL_accept() failed: error:1408F10B:SSL routines:ssl3_get_record:wrong version number (no auth attempts in 0 secs): user=<>, rip=192.241.200.78, lip=192.168.48.2, TLS handshaking: SSL_accept() failed: error:1408F10B:SSL routines:ssl3_get_record:wrong version number, session=<M8zXcRUW9MHA8chO>
+Apr 14 21:47:24 mail postfix/submissions/smtpd[2741]: disconnect from host-95-182-142-115.dynamic.voo.be[95.182.142.115] ehlo=1 auth=1 mail=1 rcpt=1 data=1 commands=5
+Apr 14 21:47:33 mail dovecot: imap(user1@l2-10.ephec-ti.be)<1738><RC4GRRUW/9Ffto5z>: Disconnected: Logged out in=1247 out=6180 deleted=0 expunged=0 trashed=0 hdr_count=2 hdr_bytes=507 body_count=2 body_bytes=1722
+Apr 14 21:47:33 mail dovecot: imap(user1@l2-10.ephec-ti.be)<2974><mK5ZbhUWvNJfto5z>: Disconnected: Logged out in=410 out=2916 deleted=0 expunged=0 trashed=0 hdr_count=3 hdr_bytes=819 body_count=0 body_bytes=0
+Apr 14 21:50:44 mail postfix/anvil[2433]: statistics: max connection rate 1/60s for (submissions:109.89.224.199) at Apr 14 21:41:10
+Apr 14 21:50:44 mail postfix/anvil[2433]: statistics: max connection count 1 for (submissions:109.89.224.199) at Apr 14 21:41:10
+Apr 14 21:50:44 mail postfix/anvil[2433]: statistics: max cache size 1 at Apr 14 21:41:10
+Apr 14 21:52:12 mail postfix/postscreen[3615]: CONNECT from [218.75.38.210]:34621 to [192.168.48.2]:25
+Apr 14 21:52:12 mail postfix/postscreen[3615]: PREGREET 6 after 0 from [218.75.38.210]:34621: EHLO\r\n
+Apr 14 21:57:12 mail postfix/postscreen[3615]: COMMAND TIME LIMIT from [218.75.38.210]:34621 after EHLO
+Apr 14 21:57:12 mail postfix/postscreen[3615]: DISCONNECT [218.75.38.210]:34621
+Apr 14 21:58:46 mail dovecot: imap-login: Disconnected: Inactivity (no auth attempts in 180 secs): user=<>, rip=218.75.38.211, lip=192.168.48.2, TLS handshaking, session=<DAj1mxUWk8zaSybT>
+Apr 14 21:59:27 mail dovecot: master: Dovecot v2.3.21 (47349e2482) starting up for imap, lmtp
+Apr 14 21:59:28 mail opendkim[647]: OpenDKIM Filter v2.11.0 starting (args: -f)
+Apr 14 21:59:28 mail opendmarc[662]: OpenDMARC Filter v1.4.0 starting (args: -f -p inet:8893@localhost -P /var/run/opendmarc/opendmarc.pid)
+Apr 14 21:59:28 mail opendmarc[662]: additional trusted authentication services: mail.l2-10.ephec-ti.be
+Apr 14 21:59:30 mail postfix/postfix-script[761]: starting the Postfix mail system
+Apr 14 21:59:30 mail postfix/master[763]: daemon started -- version 3.5.23, configuration /etc/postfix
+Apr 14 21:59:30 mail amavis[707]: starting. /usr/sbin/amavisd-new at mail.l2-10.ephec-ti.be amavisd-new-2.11.1 (20181009), Unicode aware, LC_CTYPE="C.UTF-8"
+Apr 14 21:59:30 mail amavis[707]: perl=5.032001, user=, EUID: 110 (110);  group=, EGID: 112 112 (112 112)
+Apr 14 21:59:31 mail amavis[707]: Net::Server: Group Not Defined.  Defaulting to EGID '112 112'
+Apr 14 21:59:31 mail amavis[707]: Net::Server: User Not Defined.  Defaulting to EUID '110'
+Apr 14 21:59:31 mail amavis[707]: No ext program for   .zoo, tried: zoo
+Apr 14 21:59:31 mail amavis[707]: No ext program for   .doc, tried: ripole
+Apr 14 21:59:31 mail amavis[707]: No decoder for       .F   
+Apr 14 21:59:31 mail amavis[707]: No decoder for       .doc 
+Apr 14 21:59:31 mail amavis[707]: No decoder for       .zoo 

@@ -4812,3 +4812,4 @@ Apr 14 20:07:27 mail postfix/submissions/smtpd[23627]: warning: TLS library prob
 Apr 14 20:07:28 mail postfix/submissions/smtpd[23627]: warning: TLS library problem: error:142090C1:SSL routines:tls_early_post_process_client_hello:no shared cipher:../ssl/statem/statem_srvr.c:1779:
 Apr 14 20:07:29 mail postfix/submissions/smtpd[23627]: warning: TLS library problem: error:141CF06C:SSL routines:tls_parse_ctos_key_share:bad key share:../ssl/statem/extensions_srvr.c:697:
 Apr 14 20:09:11 mail postfix/submission/smtpd[23814]: warning: non-SMTP command from unknown[198.235.24.111]: GET / HTTP/1.1
+Apr 14 21:21:52 mail postfix/smtpd[31520]: warning: TLS library problem: error:14094412:SSL routines:ssl3_read_bytes:sslv3 alert bad certificate:../ssl/record/rec_layer_s3.c:1562:SSL alert number 42:
