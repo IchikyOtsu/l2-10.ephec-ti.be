@@ -1,11 +1,19 @@
 const title = document.querySelector('.title');
+const lines = document.querySelectorAll('.line');
 
-let rotation = 0;
+let titleRotation = 0;
+let linesRotation = 0;
 
-function rotateTitleLoop() {
-  rotation += 0.01;
-  title.style.transform = `rotateY(${rotation}turn)`;
-  requestAnimationFrame(rotateTitleLoop);
+function rotateElements() {
+  titleRotation += 0.01;
+  linesRotation += 0.005;
+
+  title.style.transform = `rotateY(${titleRotation}turn)`;
+  lines.forEach(line => {
+    line.style.transform = `rotateX(${linesRotation}turn)`;
+  });
+
+  requestAnimationFrame(rotateElements);
 }
 
-rotateTitleLoop();
+rotateElements();
