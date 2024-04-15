@@ -27,7 +27,7 @@ h1 {
 p {
   font-size: 1em;
   line-height: 1.5;
-  animation: rotate-line 20s linear infinite reverse;
+  animation: rotate-line 20s linear infinite;
 }
 
 .title {
@@ -50,10 +50,13 @@ p {
 
 @keyframes rotate-line {
   0% {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
   }
   100% {
-    transform: rotateX(360deg);
+    transform: rotateY(360deg);
   }
 }
 
