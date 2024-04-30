@@ -1,0 +1,268 @@
+Content-Type: multipart/alternative;
+ boundary="------------9C2jPyfYn5TZJDfHDLV6wHao"
+Message-ID: <14fe2e05-a862-4e4f-89f6-befe11ee2b80@l2-10.ephec-ti.be>
+Date: Sun, 14 Apr 2024 23:45:44 +0200
+MIME-Version: 1.0
+User-Agent: Mozilla Thunderbird
+Content-Language: fr
+To: user2@l2-10.ephec-ti.be
+From: l2-10 <user1@l2-10.ephec-ti.be>
+Subject: c'est pas un spam t'inquietes
+
+This is a multi-part message in MIME format.
+--------------9C2jPyfYn5TZJDfHDLV6wHao
+Content-Type: text/plain; charset=UTF-8; format=flowed
+Content-Transfer-Encoding: 8bit
+
+The Apache SpamAssassin Project Logo Banner 
+<https://spamassassin.apache.org/index.html> 	
+
+*The #1 Enterprise Open-Source Spam Filter*
+
+
+Home <https://spamassassin.apache.org/index.html> 	News 
+<https://spamassassin.apache.org/news.html> 	Wiki 
+<https://cwiki.apache.org/confluence/display/SPAMASSASSIN/> 	Download 
+<https://spamassassin.apache.org/downloads.cgi?update=202001292230> 
+FAQ(Wiki)<https://cwiki.apache.org/confluence/display/SPAMASSASSIN/FrequentlyAskedQuestions> 
+	Docs <https://spamassassin.apache.org/doc.html> 	Mailing 
+Lists(Wiki)<https://cwiki.apache.org/confluence/display/SPAMASSASSIN/MailingLists> 
+	Bugs(Bugzilla)<https://issues.apache.org/SpamAssassin/> 
+Credits(SVN)<https://svn.apache.org/repos/asf/spamassassin/trunk/CREDITS>
+
+
+  The GTUBE
+
+This is the GTUBE -- the*Generic Test for Unsolicited Bulk Email*.
+
+If your spam filter supports it, the GTUBE provides a test by which you 
+can verify that the filter is installed correctly and is detecting 
+incoming spam, in a similar fashion tothe EICAR anti-virus test file 
+<https://www.eicar.org/anti_virus_test_file.htm>.
+
+Spam filter developers should add a rule, where possible, to recognise 
+the following 68-byte string in the message body, and trigger on it:
+
+   XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X
+
+Note that this should be reproduced in one line, without whitespace or 
+line breaks. A suitable mail message in RFC-822 formatcan be downloaded 
+here <https://spamassassin.apache.org/gtube/gtube.txt>.
+
+This string and mail can be reproduced freely, without attribution; they 
+are hereby placed in the public domain.
+
+
+
+Apache Software Foundation Home <https://www.apache.org/> 	License 
+<https://www.apache.org/licenses/> 	Sponsorship 
+<https://www.apache.org/foundation/sponsorship.html> 	Thanks 
+<https://www.apache.org/foundation/thanks.html> 	Security 
+<https://cwiki.apache.org/confluence/display/SPAMASSASSIN/SecurityPolicy>
+
+
+An Apache Project <https://www.apache.org/>
+
+	Copyright © 2003-2021 The Apache Software Foundation. All rights reserved.
+Apache, Apache SpamAssassin, and the Apache SpamAssassin logo are 
+registered trademarks or trademarks of The Apache Software Foundation in 
+the U.S. and/or other countries.
+
+--------------9C2jPyfYn5TZJDfHDLV6wHao
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <table
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"
+      width="100%">
+      <tbody>
+        <tr>
+          <td valign="center"><a
+              href="https://spamassassin.apache.org/index.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: underline;"><img
+src="https://spamassassin.apache.org/images/spamassassin-logobar.png"
+                alt="The Apache SpamAssassin Project Logo Banner"
+                title="The Apache SpamAssassin Project Logo Banner"
+                width="750" height="80" align="left"></a></td>
+          <td valign="center">
+            <p><strong>The #1 Enterprise Open-Source Spam Filter</strong></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center"><br>
+            <font size="+1">
+              <table class="navibar"
+style="background-color: rgb(221, 221, 221); border-spacing: 3px;"
+                cellspacing="3" cellpadding="0" border="0">
+                <tbody>
+                  <tr>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a
+href="https://spamassassin.apache.org/index.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Home</a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a
+                        href="https://spamassassin.apache.org/news.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">News</a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a target="_blank"
+href="https://cwiki.apache.org/confluence/display/SPAMASSASSIN/"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Wiki</a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a
+href="https://spamassassin.apache.org/downloads.cgi?update=202001292230"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Download</a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a target="_blank"
+href="https://cwiki.apache.org/confluence/display/SPAMASSASSIN/FrequentlyAskedQuestions"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">FAQ<span> </span><font
+                          size="-2">(Wiki)<span> </span></font></a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a
+                        href="https://spamassassin.apache.org/doc.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Docs</a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a target="_blank"
+href="https://cwiki.apache.org/confluence/display/SPAMASSASSIN/MailingLists"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Mailing
+                        Lists<span> </span><font size="-2">(Wiki)<span> </span></font></a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a target="_blank"
+                        href="https://issues.apache.org/SpamAssassin/"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Bugs<span> </span><font
+                          size="-2">(Bugzilla)<span> </span></font></a> </td>
+                    <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                      valign="top" align="center"> <a target="_blank"
+href="https://svn.apache.org/repos/asf/spamassassin/trunk/CREDITS"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Credits<span> </span><font
+                          size="-2">(SVN)<span> </span></font></a> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </font></td>
+        </tr>
+      </tbody>
+    </table>
+    <p
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"></p>
+    <div
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; padding: 50px;"><a
+        name="title" id="title">
+        <h1 style="font-size: x-large;">The GTUBE</h1>
+      </a>
+      <p>This is the GTUBE -- the<span> </span><strong>Generic Test for
+          Unsolicited Bulk Email</strong>.</p>
+      <p>If your spam filter supports it, the GTUBE provides a test by
+        which you can verify that the filter is installed correctly and
+        is detecting incoming spam, in a similar fashion to<span> </span><a
+          href="https://www.eicar.org/anti_virus_test_file.htm"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: underline;">the
+          EICAR anti-virus test file</a>.</p>
+      <p>Spam filter developers should add a rule, where possible, to
+        recognise the following 68-byte string in the message body, and
+        trigger on it:</p>
+      <p></p>
+      <pre style="font-family: monospace;">  XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X
+</pre>
+      <p></p>
+      <p>Note that this should be reproduced in one line, without
+        whitespace or line breaks. A suitable mail message in RFC-822
+        format<span> </span><a
+          href="https://spamassassin.apache.org/gtube/gtube.txt"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: underline;">can
+          be downloaded here</a>.</p>
+      <p>This string and mail can be reproduced freely, without
+        attribution; they are hereby placed in the public domain.</p>
+    </div>
+    <br
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+    <table
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"
+      width="100%">
+      <tbody>
+        <tr>
+          <td align="center"><br>
+            <table class="navibar"
+style="background-color: rgb(221, 221, 221); border-spacing: 3px;"
+              cellspacing="3" cellpadding="0" border="0">
+              <tbody>
+                <tr>
+                  <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                    valign="top" align="center"> <a target="_blank"
+                      href="https://www.apache.org/"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Apache
+                      Software Foundation Home</a> </td>
+                  <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                    valign="top" align="center"> <a target="_blank"
+                      href="https://www.apache.org/licenses/"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">License</a> </td>
+                  <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                    valign="top" align="center"> <a target="_blank"
+href="https://www.apache.org/foundation/sponsorship.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Sponsorship</a> </td>
+                  <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                    valign="top" align="center"> <a target="_blank"
+href="https://www.apache.org/foundation/thanks.html"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Thanks</a> </td>
+                  <td class="navibar"
+style="background-color: rgb(232, 232, 232); vertical-align: middle; padding: 0px; text-decoration: none;"
+                    valign="top" align="center"> <a target="_blank"
+href="https://cwiki.apache.org/confluence/display/SPAMASSASSIN/SecurityPolicy"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: none;">Security</a> </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+    <table
+style="color: rgb(0, 0, 0); font-family: verdana, arial, helvetica, sans-serif; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;"
+      width="90%" align="center">
+      <tbody>
+        <tr>
+          <td valign="top">
+            <p></p>
+            <div style="padding: 5px;" align="left"><a
+                href="https://www.apache.org/"
+style="font-weight: bold; color: rgb(72, 52, 23); text-decoration: underline;"><img
+src="https://spamassassin.apache.org/gtube/images/apache-feather.png"
+                  alt="An Apache Project" title="An Apache Project"
+                  width="86" height="35" border="0"></a></div>
+            <p></p>
+          </td>
+          <td align="center">Copyright © 2003-2021 The Apache Software
+            Foundation. All rights reserved.<br>
+            Apache, Apache SpamAssassin, and the Apache SpamAssassin
+            logo are registered trademarks or trademarks of The Apache
+            Software Foundation in the U.S. and/or other countries.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
+  </body>
+</html>
+
+--------------9C2jPyfYn5TZJDfHDLV6wHao--
