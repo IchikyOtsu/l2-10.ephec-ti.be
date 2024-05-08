@@ -1,3 +1,5 @@
+version: '3.7'
+
 services:
 
   dns:
@@ -51,10 +53,10 @@ services:
         constraints:
           - node.role == manager
     environment:
-      MYSQL_ROOT_PASSWORD:root
-      MYSQL_DATABASE:woodytoys
-      MYSQL_USER:woodytoys
-      MYSQL_PASSWORD:mypass
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: woodytoys
+      MYSQL_USER: woodytoys
+      MYSQL_PASSWORD: mypass
     volumes:
       - ./web/db/sql:/docker-entrypoint-initdb.d
       - ./web/db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
