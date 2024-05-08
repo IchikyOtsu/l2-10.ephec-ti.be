@@ -337,12 +337,6 @@ meta   AXB_XMAILER_MIMEOLE_OL_024C2  (__AXB_XM_OL_024C2 && __AXB_MO_OL_024C2)
 describe AXB_XMAILER_MIMEOLE_OL_024C2 Yet another X header trait
 ##} AXB_XMAILER_MIMEOLE_OL_024C2
 
-##{ AXB_X_FF_SEZ_S
-
-header          AXB_X_FF_SEZ_S          X-Forefront-Antispam-Report =~ /\bSFV\:SPM\b/
-describe        AXB_X_FF_SEZ_S          Forefront sez this is spam
-##} AXB_X_FF_SEZ_S
-
 ##{ BANKING_LAWS
 
 body		BANKING_LAWS	/banking laws/i
@@ -2650,6 +2644,12 @@ meta           MANY_SUBDOM         __MANY_SUBDOM && !__JM_REACTOR_DATE && !__UNS
 describe       MANY_SUBDOM         Lots and lots of subdomain parts in a URI
 ##} MANY_SUBDOM
 
+##{ MAY_BE_FORGED
+
+meta	 MAY_BE_FORGED	__MAY_BE_FORGED && !__NOT_SPOOFED && !__VIA_ML
+describe MAY_BE_FORGED	Relay IP's reverse DNS does not resolve to IP
+##} MAY_BE_FORGED
+
 ##{ MID_DEGREES
 
 header MID_DEGREES  Message-ID =~ /^<\d{14}\.[A-F0-9]{10}\@[A-Z0-9]+>$/
@@ -3091,15 +3091,6 @@ meta     PDS_FRNOM_TODOM_NAKED_TO __NAKED_TO && PDS_FROM_NAME_TO_DOMAIN
 describe PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
 #score    PDS_FRNOM_TODOM_NAKED_TO 1.5
 ##} PDS_FRNOM_TODOM_NAKED_TO
-
-##{ PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
-
-if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
-  meta       PDS_FROM_2_EMAILS        __PDS_FROM_2_EMAILS && !__VIA_ML && !__VIA_RESIGNER && !__MSGID_JAVAMAIL && !__RCD_RDNS_MAIL_MESSY && !__RCD_RDNS_SMTP_MESSY && !__DKIM_EXISTS 
-  describe   PDS_FROM_2_EMAILS        From header has multiple different addresses
-#  score      PDS_FROM_2_EMAILS        3.500	# limit
-endif
-##} PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
 
 ##{ PDS_FROM_NAME_TO_DOMAIN
 
@@ -4265,12 +4256,6 @@ meta           TO_EQ_FM_DOM_HTML_IMG    __TO_EQ_FM_DOM_HTML_IMG && !__NOT_SPOOFE
 describe       TO_EQ_FM_DOM_HTML_IMG    To domain == From domain and HTML image link
 ##} TO_EQ_FM_DOM_HTML_IMG
 
-##{ TO_EQ_FM_DOM_HTML_ONLY
-
-meta           TO_EQ_FM_DOM_HTML_ONLY   __TO_EQ_FM_DOM_HTML_ONLY && !__NOT_SPOOFED && !__CTYPE_MULTIPART_ALT && !HTML_MIME_NO_HTML_TAG && !__IS_EXCH && !__MSGID_BEFORE_RECEIVED && !__FM_TO_ALL_NUMS && !__FROM_LOWER && !__HAS_IN_REPLY_TO && !__BUGGED_IMG && !__FROM_ENCODED_QP && !__MSGID_OK_HEX
-describe       TO_EQ_FM_DOM_HTML_ONLY   To domain == From domain and HTML only
-##} TO_EQ_FM_DOM_HTML_ONLY
-
 ##{ TO_EQ_FM_DOM_SPF_FAIL ifplugin Mail::SpamAssassin::Plugin::SPF
 
 ifplugin Mail::SpamAssassin::Plugin::SPF
@@ -5159,6 +5144,15 @@ describe T_PDS_FREEMAIL_REPLYTO_URISHRT Freemail replyto with URI shortener
 endif
 endif
 ##} T_PDS_FREEMAIL_REPLYTO_URISHRT ifplugin Mail::SpamAssassin::Plugin::WLBLEval if (version >= 3.004000)
+
+##{ T_PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
+
+if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
+  meta       T_PDS_FROM_2_EMAILS        __PDS_FROM_2_EMAILS && !__VIA_ML && !__VIA_RESIGNER && !__MSGID_JAVAMAIL && !__RCD_RDNS_MAIL_MESSY && !__RCD_RDNS_SMTP_MESSY && !__DKIM_EXISTS 
+  describe   T_PDS_FROM_2_EMAILS        From header has multiple different addresses
+#  score      T_PDS_FROM_2_EMAILS        3.500	# limit
+endif
+##} T_PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
 
 ##{ T_PDS_FROM_2_EMAILS_SHRTNER ifplugin Mail::SpamAssassin::Plugin::WLBLEval if (version >= 3.004000)
 
@@ -8582,6 +8576,8 @@ meta           __MANY_SPAN_IN_TEXT   (__SPAN_BEG_TEXT > 4) && (__SPAN_END_TEXT >
 
 uri            __MANY_SUBDOM       m;^https?://(?:[^\./]{1,30}\.){6};i
 
+header __MAY_BE_FORGED	Received =~ /\(may be forged\)/
+
 header __MID_START_001C   Message-ID =~ /^<000001c/
 
 body     __MILLIONS       /\bmillions\sof\s(?:dollar|euro|pound)/i
@@ -9450,8 +9446,6 @@ header         __TO_ALL_NUMS        To:addr =~ /^\d+@/
 meta           __TO_EQ_FM_DIRECT_MX __TO_EQ_FROM && __DOS_DIRECT_TO_MX
 
 meta           __TO_EQ_FM_DOM_HTML_IMG  __TO_EQ_FROM_DOM && __HTML_LINK_IMAGE
-
-meta           __TO_EQ_FM_DOM_HTML_ONLY __TO_EQ_FROM_DOM && MIME_HTML_ONLY
 
 if !plugin(Mail::SpamAssassin::Plugin::SPF)
   meta           __TO_EQ_FM_DOM_SPF_FAIL  0

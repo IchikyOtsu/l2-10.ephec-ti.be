@@ -1,0 +1,11 @@
+May  8 13:52:31 mail postfix/master[761]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:52:35 mail postfix/master[893]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:52:43 mail postfix/master[981]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:52:50 mail postfix/master[1072]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:52:57 mail postfix/master[1170]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:53:04 mail postfix/master[1258]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:53:09 mail postfix/master[1346]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:53:16 mail postfix/master[1434]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 13:53:24 mail postfix/master[1532]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
+May  8 14:27:34 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  8 14:28:17 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
