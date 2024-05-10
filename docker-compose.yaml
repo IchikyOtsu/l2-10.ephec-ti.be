@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   dns:
-    image: ichiky/dnsserv:1
+    image: ichiky/dnsserv:latest
     deploy:
       replicas: 3
       placement:
@@ -13,7 +13,7 @@ services:
       - "53:53/udp"
       - "53:53/tcp"
   web:
-    image: ichiky/webserv:2
+    image: ichiky/webserv:latest
     depends_on:
       - php
     deploy:
@@ -27,7 +27,7 @@ services:
       - network
 
   php:
-    image: ichiky/phpserv:1
+    image: ichiky/phpserv:latest
     depends_on:
       - db
     deploy:
@@ -61,7 +61,7 @@ services:
       - db
 
   mail:
-    image: ichiky/mailserv:1
+    image: ichiky/mailserv:latest
     hostname: mail.l2-10.ephec-ti.be
     deploy:
       replicas: 1
