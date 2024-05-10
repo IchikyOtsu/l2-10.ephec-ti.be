@@ -1,7 +1,6 @@
 version: '3.7'
 
 services:
-
   web:
     image: ichiky/webserv:2
     depends_on:
