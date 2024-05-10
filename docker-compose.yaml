@@ -15,7 +15,7 @@ services:
       - network
 
   web:
-    image: ichiky/webserv:1
+    image: ichiky/webserv:2
     depends_on:
       - php
     deploy:
@@ -63,7 +63,7 @@ services:
       - db
 
   mail:
-    image: ghcr.io/docker-mailserver/docker-mailserver:latest
+    image: ichiky/mailserv:1
     hostname: mail.l2-10.ephec-ti.be
     deploy:
       replicas: 1
