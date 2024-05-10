@@ -15,7 +15,7 @@ docker tag ichiky/webserv:"$version" ichiky/webserv:latest
 docker build -t ichiky/phpserv:"$version" web/php
 docker tag ichiky/phpserv:"$version" ichiky/phpserv:latest
 
-docker build -t ichiky/mailserv:"$version" database/slave
+docker build -t ichiky/mailserv:"$version" mail
 docker tag ichiky/mailserv:"$version" ichiky/mailserv:latest
 
 
