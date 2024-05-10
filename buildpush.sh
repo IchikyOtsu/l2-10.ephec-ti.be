@@ -4,7 +4,9 @@ set -e
 
 default_version="3"
 version=${1:-"$default_version"}
-
+export DOCKER_USERNAME="ichiky"
+export DOCKER_PASSWORD="votre_mot_de_passe_dockerhub"
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 docker build -t ichiky/dnsserv:"$version" dns 
 docker tag ichiky/dnsserv:"$version" ichiky/dnsserv:latest
