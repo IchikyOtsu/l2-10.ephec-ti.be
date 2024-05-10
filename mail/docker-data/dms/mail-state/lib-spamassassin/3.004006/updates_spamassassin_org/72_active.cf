@@ -1088,6 +1088,14 @@ ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
 endif
 ##} FILL_THIS_FORM ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
 
+##{ FILL_THIS_FORM_FRAUD_PHISH ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
+
+ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
+  meta     FILL_THIS_FORM_FRAUD_PHISH     __FILL_THIS_FORM_FRAUD_PHISH && !__SPOOFED_URL && !__VIA_ML && !__HAS_IN_REPLY_TO && !__THREADED && !__HDR_RCVD_SHOPIFY && !__HAS_ERRORS_TO 
+  describe FILL_THIS_FORM_FRAUD_PHISH     Answer suspicious question(s)
+endif
+##} FILL_THIS_FORM_FRAUD_PHISH ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
+
 ##{ FILL_THIS_FORM_LOAN ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
 
 ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
@@ -1511,6 +1519,12 @@ endif
 header   FROM_UNBAL2	From:raw =~ /^ [^<]* > /xm
 describe FROM_UNBAL2	From with unbalanced angle brackets, '<' missing
 ##} FROM_UNBAL2
+
+##{ FROM_WSP_LEAD
+
+header   FROM_WSP_LEAD 	From:raw =~ /< \s+ [^>\s] [^>]* > [^<>]* \z/xm
+describe FROM_WSP_LEAD	Leading whitespace after '<' in From header field
+##} FROM_WSP_LEAD
 
 ##{ FROM_WSP_TRAIL
 
@@ -2644,12 +2658,6 @@ meta           MANY_SUBDOM         __MANY_SUBDOM && !__JM_REACTOR_DATE && !__UNS
 describe       MANY_SUBDOM         Lots and lots of subdomain parts in a URI
 ##} MANY_SUBDOM
 
-##{ MAY_BE_FORGED
-
-meta	 MAY_BE_FORGED	__MAY_BE_FORGED && !__NOT_SPOOFED && !__VIA_ML
-describe MAY_BE_FORGED	Relay IP's reverse DNS does not resolve to IP
-##} MAY_BE_FORGED
-
 ##{ MID_DEGREES
 
 header MID_DEGREES  Message-ID =~ /^<\d{14}\.[A-F0-9]{10}\@[A-Z0-9]+>$/
@@ -3046,6 +3054,13 @@ describe PDS_BAD_THREAD_QP_64 Bad thread header - short QP
 #score    PDS_BAD_THREAD_QP_64 1.0
 ##} PDS_BAD_THREAD_QP_64
 
+##{ PDS_BRAND_SUBJ_NAKED_TO
+
+meta     PDS_BRAND_SUBJ_NAKED_TO __NAKED_TO && __PDS_TO_BRAND_SUBJECT && !MAILING_LIST_MULTI
+describe PDS_BRAND_SUBJ_NAKED_TO Subject starts with To: brand and naked To:
+#score    PDS_BRAND_SUBJ_NAKED_TO 1.0
+##} PDS_BRAND_SUBJ_NAKED_TO
+
 ##{ PDS_BTC_ID
 
 meta     PDS_BTC_ID __PDS_BTC_ID
@@ -3091,6 +3106,15 @@ meta     PDS_FRNOM_TODOM_NAKED_TO __NAKED_TO && PDS_FROM_NAME_TO_DOMAIN
 describe PDS_FRNOM_TODOM_NAKED_TO Naked to From name equals to Domain
 #score    PDS_FRNOM_TODOM_NAKED_TO 1.5
 ##} PDS_FRNOM_TODOM_NAKED_TO
+
+##{ PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
+
+if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
+  meta       PDS_FROM_2_EMAILS        __PDS_FROM_2_EMAILS && !__VIA_ML && !__VIA_RESIGNER && !__MSGID_JAVAMAIL && !__RCD_RDNS_MAIL_MESSY && !__RCD_RDNS_SMTP_MESSY && !__DKIM_EXISTS 
+  describe   PDS_FROM_2_EMAILS        From header has multiple different addresses
+#  score      PDS_FROM_2_EMAILS        3.500	# limit
+endif
+##} PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
 
 ##{ PDS_FROM_NAME_TO_DOMAIN
 
@@ -3680,12 +3704,6 @@ describe   RDNS_NUM_TLD_XM             Relay rDNS has numeric TLD + suspicious h
 tflags     RDNS_NUM_TLD_XM             publish
 ##} RDNS_NUM_TLD_XM
 
-##{ READY_TO_SHIP
-
-body       READY_TO_SHIP               /(?:(?:in our (?:stock|warehouse|store|storage facility)(?: today| now| right away)?[.,:]\s|our (?:\w+,? ){2,8}(?:is |now )+)Ready (?:to (?:be )?|for )+(?:ship|send|deliver)|ready (?:for shipping|to (?:ship|send)) (?:(?:in|from|by) our (?:warehouse|stock|stor(?:e|age))|(?:to|for)(?: global(?:ly)?| worldwide| customers){2})|(?:(?:our|this|a|great|fine|wonderful|cool|popular) new product|we have(?: \w+){1,6} available|ready) in (?:our )?(?:warehouse|stock|stor(?:e|age))|just arrived in our (?:warehouse|stor(?:e|age))|we will (?:contact the (?:warehouse|logistics|store|storage(?: facility)) to )?arrange (?:the )?(?:shipment|delivery)|a new (?:\w+ ){1,3}in our (?:warehouse|storage)|this (?:new )?(?:merchandise|product|item) is (?:now )?(?:ready (?:to ship )?|available )(?:at|in|from) our (?:warehouse|stock|stor(?:e|age)))/i
-#score      READY_TO_SHIP               1.250	# limit
-##} READY_TO_SHIP
-
 ##{ REPLYTO_WITHOUT_TO_CC
 
 meta REPLYTO_WITHOUT_TO_CC     (__HAS_REPLY_TO && !__TOCC_EXISTS)
@@ -3867,12 +3885,6 @@ header SCC_ISEMM_LID_1B		X-Mailer-LID =~ /(?:[56][0-9],)+/
 tflags SCC_ISEMM_LID_1B		publish
 #score SCC_ISEMM_LID_1B		1.5
 ##} SCC_ISEMM_LID_1B
-
-##{ SCC_SPAMMER_ADDR_2
-
-describe SCC_SPAMMER_ADDR_2	Fingerprint of a particular spammer
-body     SCC_SPAMMER_ADDR_2	/6130 W Flamingo Rd/
-##} SCC_SPAMMER_ADDR_2
 
 ##{ SCC_SPECIAL_GUID
 
@@ -4725,14 +4737,6 @@ endif
 endif
 ##} T_DRUGS_ERECTILE_SHORT_SHORTNER ifplugin Mail::SpamAssassin::Plugin::WLBLEval if (version >= 3.004000)
 
-##{ T_FILL_THIS_FORM_FRAUD_PHISH ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
-
-ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
-  meta     T_FILL_THIS_FORM_FRAUD_PHISH     __FILL_THIS_FORM_FRAUD_PHISH && !__SPOOFED_URL && !__VIA_ML && !__HAS_IN_REPLY_TO && !__THREADED && !__HDR_RCVD_SHOPIFY && !__HAS_ERRORS_TO 
-  describe T_FILL_THIS_FORM_FRAUD_PHISH     Answer suspicious question(s)
-endif
-##} T_FILL_THIS_FORM_FRAUD_PHISH ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
-
 ##{ T_FILL_THIS_FORM_SHORT ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
 
 ifplugin Mail::SpamAssassin::Plugin::ReplaceTags
@@ -5144,15 +5148,6 @@ describe T_PDS_FREEMAIL_REPLYTO_URISHRT Freemail replyto with URI shortener
 endif
 endif
 ##} T_PDS_FREEMAIL_REPLYTO_URISHRT ifplugin Mail::SpamAssassin::Plugin::WLBLEval if (version >= 3.004000)
-
-##{ T_PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
-
-if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
-  meta       T_PDS_FROM_2_EMAILS        __PDS_FROM_2_EMAILS && !__VIA_ML && !__VIA_RESIGNER && !__MSGID_JAVAMAIL && !__RCD_RDNS_MAIL_MESSY && !__RCD_RDNS_SMTP_MESSY && !__DKIM_EXISTS 
-  describe   T_PDS_FROM_2_EMAILS        From header has multiple different addresses
-#  score      T_PDS_FROM_2_EMAILS        3.500	# limit
-endif
-##} T_PDS_FROM_2_EMAILS if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
 
 ##{ T_PDS_FROM_2_EMAILS_SHRTNER ifplugin Mail::SpamAssassin::Plugin::WLBLEval if (version >= 3.004000)
 
@@ -5797,12 +5792,6 @@ describe   WALMART_IMG_NOT_RCVD_WAL    Walmart hosted image but message not from
 tflags     WALMART_IMG_NOT_RCVD_WAL    publish
 ##} WALMART_IMG_NOT_RCVD_WAL
 
-##{ WIKI_IMG
-
-uri            WIKI_IMG            m,^https?://[^/]+wiki[mp]edia\.org/.+\.(?:png|gif|jpe?g),i
-describe       WIKI_IMG            Image from wikipedia
-##} WIKI_IMG
-
 ##{ WORD_INVIS if can(Mail::SpamAssassin::Conf::feature_bug6558_free)
 
 if can(Mail::SpamAssassin::Conf::feature_bug6558_free)
@@ -5933,12 +5922,6 @@ tflags      XPRIO_VISTA          publish
 
 header X_MAILER_CME_6543_MSN	X-Mailer =~ /^CME-V6\.5\.4\.3; MSN\s*$/
 ##} X_MAILER_CME_6543_MSN
-
-##{ YOUR_DELIVERY_ADDRESS
-
-body       YOUR_DELIVERY_ADDRESS       /(?:(?:respond|reply|answer) (?:to )?(?:our|this) ?e?mail (?:[\w,]+\s){0,10}(?:with|and send(?: us)?)|we need to know|let us know|(?:send|provide|tell|inform)(?: us)?(?: of)?|confirm|indicate)(?: t?he (?:order )?quantity and)? (?:your |the )?(?:detailed |specific |exact )?(?:(?:delivery |shipping |mailing |shipment |receiving )?(?:address|location)(?:\s?[,.;]|(?: and| so)? we| if you)|address (?:for|of) (?:shipping|delivery|shipment))|(?:provide|give) us (?:with |details of )(?:the |your )?address,? (?:and )?we will contact (?:the )?(?:warehouse|logistics|storage(?: facility))|your (?:mailing|shipping) address to (?:arrange|set ?up) (?:shipment|delivery) (?:(?:for|to) you|of th)/i
-#score      YOUR_DELIVERY_ADDRESS       1.250	# limit
-##} YOUR_DELIVERY_ADDRESS
 
 ##{ YOU_INHERIT
 
@@ -8576,8 +8559,6 @@ meta           __MANY_SPAN_IN_TEXT   (__SPAN_BEG_TEXT > 4) && (__SPAN_END_TEXT >
 
 uri            __MANY_SUBDOM       m;^https?://(?:[^\./]{1,30}\.){6};i
 
-header __MAY_BE_FORGED	Received =~ /\(may be forged\)/
-
 header __MID_START_001C   Message-ID =~ /^<000001c/
 
 body     __MILLIONS       /\bmillions\sof\s(?:dollar|euro|pound)/i
@@ -9057,6 +9038,8 @@ endif
 meta     __PDS_SPOOF_GMAIL_MID __PDS_FROM_GMAIL && !__PDS_GMAIL_MID && !__FSL_RELAY_GOOGLE
 
 header   __PDS_TONAME_EQ_TOLOCAL To:raw =~ /^\s*['"]?([^'"]+)['"]? <?\1\@/
+
+header  __PDS_TO_BRAND_SUBJECT ALL =~ /^To:\s+<?[^\@]+\@([^\.]+)\.(?:[^\n]+\n+)*^Subject: \"?\1\b/ism
 
 if can(Mail::SpamAssassin::Conf::perl_min_version_5010000)
   header     __PDS_TO_EQ_FROM_NAME_1  ALL =~ /\nTo: (?:[^\n<]{0,80}<)?([^\n\s>]+)>?\n+(?:[^\n]{1,100}\n+)*From:\W+(\1)([^\n\w<]++<)?((?!\1)[^\n">]++)>?\n/ism

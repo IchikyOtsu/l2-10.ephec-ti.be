@@ -15,7 +15,7 @@ logrotate state -- version 2
 "/var/log/daemon.log" 2024-4-14-6:0:0
 "/var/log/razor-agent.log" 2024-4-14-6:0:0
 "/var/log/btmp" 2024-5-1-6:31:8
-"/var/log/mail/mail.err" 2024-4-28-6:27:2
+"/var/log/mail/mail.err" 2024-5-9-6:53:2
 "/var/log/lpr.log" 2024-4-14-6:0:0
 "/var/log/dbconfig-common/dbc.log" 2024-4-14-6:0:0
 "/var/log/user.log" 2024-4-14-6:0:0

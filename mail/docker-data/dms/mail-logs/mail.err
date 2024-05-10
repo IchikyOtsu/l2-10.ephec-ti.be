@@ -1,11 +1,68 @@
-May  8 13:52:31 mail postfix/master[761]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:52:35 mail postfix/master[893]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:52:43 mail postfix/master[981]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:52:50 mail postfix/master[1072]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:52:57 mail postfix/master[1170]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:53:04 mail postfix/master[1258]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:53:09 mail postfix/master[1346]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:53:16 mail postfix/master[1434]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 13:53:24 mail postfix/master[1532]: fatal: open lock file /var/lib/postfix/master.lock: unable to set exclusive lock: Resource temporarily unavailable
-May  8 14:27:34 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
-May  8 14:28:17 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 07:00:16 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 07:14:53 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 07:20:56 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 07:31:22 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 08:18:03 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 08:38:46 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:04:20 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:04:35 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:04:54 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:25:10 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:37:06 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:37:43 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:45:03 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 09:45:20 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 10:05:23 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 10:08:06 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 10:25:51 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 10:47:11 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 10:47:31 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 11:08:06 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 11:29:31 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 11:50:20 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 12:10:22 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 12:48:57 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 12:59:44 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 13:00:44 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 13:51:53 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 14:43:50 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 15:06:58 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 15:07:16 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 15:27:35 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 16:51:09 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 17:11:07 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 17:27:01 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: EOF
+May  9 18:34:35 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 19:53:09 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 21:58:14 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 22:19:34 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 22:35:31 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 22:40:03 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 23:36:34 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 23:37:02 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 23:48:16 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May  9 23:57:08 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 00:05:15 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 00:46:37 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 00:59:26 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 01:20:03 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 01:21:45 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 01:39:27 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 01:49:15 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 01:57:47 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: EOF
+May 10 02:04:24 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 02:21:34 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 02:25:19 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 02:53:41 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: EOF
+May 10 03:14:53 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 03:56:11 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 03:56:41 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 04:45:54 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 04:56:03 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 05:24:57 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 05:39:22 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 05:47:27 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 05:49:40 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 07:17:32 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 07:37:05 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
+May 10 07:37:57 mail dovecot: auth: Error: auth client 0 disconnected with 1 pending requests: Connection reset by peer
