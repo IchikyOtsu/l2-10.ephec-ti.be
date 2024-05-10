@@ -24,7 +24,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./web/pages:/var/www/html
+      - /l2-10.ephec-ti.be/web/pages:/var/www/html
     networks:
       - network
 
@@ -40,7 +40,7 @@ services:
       MYSQL_PASSWORD: ${PHP_PASS}
       MYSQL_HOST: ${PHP_HOST}
     volumes:
-      - ./web/pages:/var/www/html
+      - /l2-10.ephec-ti.be/web/pages:/var/www/html
     networks:
       - network
       - db
@@ -57,8 +57,8 @@ services:
       MYSQL_USER: woodytoys
       MYSQL_PASSWORD: mypass
     volumes:
-      - ./web/db/sql:/docker-entrypoint-initdb.d
-      - ./web/db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
+      - /l2-10.ephec-ti.be/web/db/sql:/docker-entrypoint-initdb.d
+      - /l2-10.ephec-ti.be/web/db/conf/my-resolve.cnf:/etc/mysql/conf.d/my-resolve.cnf
     networks:
       - db
 
@@ -67,7 +67,7 @@ services:
     hostname: mail.l2-10.ephec-ti.be
     deploy:
       replicas: 1
-    env_file: ./mail/mailserver.env
+    env_file: /l2-10.ephec-ti.be/mail/mailserver.env
     ports:
       - "25:25"
       - "143:143"
@@ -75,10 +75,10 @@ services:
       - "587:587"
       - "993:993"
     volumes:
-      - ./mail/docker-data/dms/mail-data/:/var/mail/
-      - ./mail/docker-data/dms/mail-state/:/var/mail-state/
-      - ./mail/docker-data/dms/mail-logs/:/var/log/mail/
-      - ./mail/docker-data/dms/config/:/tmp/docker-mailserver/
+      - /l2-10.ephec-ti.be/mail/docker-data/dms/mail-data/:/var/mail/
+      - /l2-10.ephec-ti.be/mail/docker-data/dms/mail-state/:/var/mail-state/
+      - /l2-10.ephec-ti.be/mail/docker-data/dms/mail-logs/:/var/log/mail/
+      - /l2-10.ephec-ti.be/mail/docker-data/dms/config/:/tmp/docker-mailserver/
       - /etc/localtime:/etc/localtime:ro
     networks:
       - network
