@@ -33,3 +33,6 @@ blog   IN A     54.37.15.108
 blog   IN AAAA  2001:41d0:401:3000::a8a
 dev    IN A     54.37.15.108
 mail   IN A     54.37.15.108
+
+cdn.dev CNAME cl-gl20a138e0.gcdn.co.
+
