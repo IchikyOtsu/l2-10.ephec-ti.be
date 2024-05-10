@@ -1,6 +1,17 @@
 version: '3.7'
 
 services:
+
+  dns:
+    image: ichiky/dnsserv:1
+    deploy:
+      replicas: 3
+      placement:
+        constraints:
+          - node.role == manager
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
   web:
     image: ichiky/webserv:2
     depends_on:
