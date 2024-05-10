@@ -25,7 +25,6 @@ services:
       - "443:443"
     volumes:
       - ./web/pages:/var/www/html
-      - /etc/letsencrypt:/etc/letsencrypt/
     networks:
       - network
 
