@@ -5,6 +5,7 @@ services:
   dns:
     image: ichiky/dnsserv:1
     deploy:
+      replicas: 3
       placement:
         constraints:
           - node.role == manager
