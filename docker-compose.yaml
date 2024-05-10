@@ -80,7 +80,6 @@ services:
       - ./mail/docker-data/dms/mail-logs/:/var/log/mail/
       - ./mail/docker-data/dms/config/:/tmp/docker-mailserver/
       - /etc/localtime:/etc/localtime:ro
-      - /etc/letsencrypt:/etc/letsencrypt/
     networks:
       - network
     restart: always
