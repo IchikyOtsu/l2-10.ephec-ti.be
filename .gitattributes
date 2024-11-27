@@ -1,1 +1,7 @@
 *.1 linguist-language=Text
+*.2 linguist-language=Text
+*.3 linguist-language=Text
+*.gz linguist-language=Text
+*.2 linguist-detectable=false
+*.3 linguist-detectable=false
+*.gz linguist-detectable=false
